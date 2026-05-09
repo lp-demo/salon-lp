@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- ================================
+       SEO / OGP
+       ※ 別業種に流用するときは title / description / og:* を書き換える
+  ================================= -->
+  <title>凪 整体院 | 完全予約制の隠れ家サロン（架空デモLP）</title>
+  <meta name="description" content="世田谷の住宅街にある完全予約制の整体院。丁寧なカウンセリングと落ち着いた個室空間で、肩こり・腰の重さ・疲労感をやわらげます。">
+  <meta property="og:title" content="凪 整体院 | 完全予約制の隠れ家サロン">
+  <meta property="og:description" content="完全予約制・個室・丁寧なカウンセリング。30〜50代に選ばれる隠れ家整体院。">
+  <meta property="og:type" content="website">
+
+  <!-- フォント（Noto Sans JP / Shippori Mincho を併用して読みやすく） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <!-- ================================
+       ヘッダー
+       ※ 店名・ナビは「site-name」「site-nav」を書き換えるだけで流用可
+  ================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="site-name">
+        <span class="site-name__en">NAGI</span>
+        <span class="site-name__jp">凪 整体院</span>
+      </a>
+
+      <nav class="site-nav" aria-label="メインメニュー">
+        <a href="#worry">お悩み</a>
+        <a href="#feature">特徴</a>
+        <a href="#voice">お客様の声</a>
+        <a href="#flow">ご利用の流れ</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#cta-final" class="btn btn--small btn--primary header-cta">予約する</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ================================
+         ① ファーストビュー
+         ※ コピーは <h1> と .hero__lead を書き換える。
+         ※ 背景画像は CSS の .hero__visual の background-image を差し替え。
+    ================================= -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text fade-up">
+          <p class="hero__eyebrow">Seitai Salon&nbsp;&nbsp;NAGI</p>
+          <h1 class="hero__title">
+            肩のこわばりを、<br>
+            <span class="hero__title-accent">深呼吸ひとつぶん</span>ゆるめる。
+          </h1>
+          <p class="hero__lead">
+            世田谷の住宅街にある、完全予約制の隠れ家整体院。<br>
+            その日の体調に合わせて、ひとり分の時間と空間を整えます。
+          </p>
+
+          <div class="hero__cta">
+            <a href="#cta-final" class="btn btn--primary btn--large">
+              <span class="btn__icon" aria-hidden="true">💬</span>
+              LINEで予約する
+            </a>
+            <a href="#flow" class="btn btn--ghost btn--large">初めての方へ</a>
+          </div>
+
+          <ul class="hero__points">
+            <li>完全予約制</li>
+            <li>個室・お一人ずつ</li>
+            <li>駅徒歩5分</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual fade-up">
+          <div class="hero__photo" role="img" aria-label="自然光が入る落ち着いた施術空間"></div>
+          <div class="hero__photo-caption">
+            <span class="dot"></span>本日の予約 残り 2 枠
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>SCROLL
+      </div>
+    </section>
+
+    <!-- ================================
+         ② よくある悩み
+         ※ カードのテキストを書き換えれば、別業種でもそのまま使える
+    ================================= -->
+    <section class="section worry" id="worry">
+      <div class="container">
+        <header class="section-head fade-up">
+          <p class="section-head__en">Worry</p>
+          <h2 class="section-head__jp">こんなお悩み、<br class="sp-only">ありませんか？</h2>
+        </header>
+
+        <div class="worry__grid">
+          <article class="worry-card fade-up">
+            <div class="worry-card__num">01</div>
+            <h3 class="worry-card__title">慢性的な肩こり・<br>腰の重さ</h3>
+            <p class="worry-card__text">
+              デスクワークや家事で、夕方になると肩や腰がずっしり。マッサージに行っても、数日でまた元通りになってしまう。
+            </p>
+          </article>
+
+          <article class="worry-card fade-up">
+            <div class="worry-card__num">02</div>
+            <h3 class="worry-card__title">疲れが翌日に<br>持ち越してしまう</h3>
+            <p class="worry-card__text">
+              寝ても疲れが抜けない。朝、体が重く感じる。気力でなんとか1日をやり過ごす日が増えてきた。
+            </p>
+          </article>
+
+          <article class="worry-card fade-up">
+            <div class="worry-card__num">03</div>
+            <h3 class="worry-card__title">落ち着いて<br>相談できる場所がほしい</h3>
+            <p class="worry-card__text">
+              大きなお店は人の出入りが多くて落ち着かない。話を聞いてもらえて、自分のペースで通える場所を探している。
+            </p>
+          </article>
+        </div>
+
+        <p class="worry__bridge fade-up">
+          凪 整体院は、そんな方のための<br class="sp-only">「完全予約制・個室の整体院」です。
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================
+         ③ この店舗の特徴
+         ※ feature__list の <li> を増減すれば項目数を変えられる
+    ================================= -->
+    <section class="section feature" id="feature">
+      <div class="container">
+        <header class="section-head fade-up">
+          <p class="section-head__en">Feature</p>
+          <h2 class="section-head__jp">凪 整体院が選ばれる<br class="sp-only">4つの理由</h2>
+        </header>
+
+        <div class="feature__grid">
+          <article class="feature-card fade-up">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M24 14v10l7 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">01.&nbsp;完全予約制</h3>
+            <p class="feature-card__text">
+              他のお客様と顔を合わせない、お一人ずつの貸切時間。受付から退店まで、ゆったりお過ごしいただけます。
+            </p>
+          </article>
+
+          <article class="feature-card fade-up">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M10 36V18a4 4 0 014-4h20a4 4 0 014 4v18l-6-4H16l-6 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M18 24h12M18 30h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">02.&nbsp;丁寧なカウンセリング</h3>
+            <p class="feature-card__text">
+              初回は20〜30分かけて、お体の状態と日々の習慣をうかがいます。痛みの原因と、ご自宅でできるケアをお伝えします。
+            </p>
+          </article>
+
+          <article class="feature-card fade-up">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <path d="M24 6c-7 0-12 5-12 12 0 9 12 24 12 24s12-15 12-24c0-7-5-12-12-12z" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="24" cy="18" r="4" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">03.&nbsp;駅徒歩5分の立地</h3>
+            <p class="feature-card__text">
+              最寄り駅から徒歩5分。住宅街の静かな一角で、看板も控えめ。お仕事帰りにも、お休みの日にも通いやすい場所です。
+            </p>
+          </article>
+
+          <article class="feature-card fade-up">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="8" y="14" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 22h32M16 14V8M32 14V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">04.&nbsp;落ち着いた個室空間</h3>
+            <p class="feature-card__text">
+              木の温もりと自然光を活かした、5坪ほどの個室。アロマと小さなBGMで、施術前から呼吸が深くなる空間です。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+         ④ お客様の声
+         ※ voice-card を複製・編集すれば声を増やせる
+    ================================= -->
+    <section class="section voice" id="voice">
+      <div class="container">
+        <header class="section-head fade-up">
+          <p class="section-head__en">Voice</p>
+          <h2 class="section-head__jp">お客様の声</h2>
+        </header>
+
+        <div class="voice__grid">
+          <article class="voice-card fade-up">
+            <div class="voice-card__rating" aria-label="評価 5/5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="voice-card__text">
+              「いつも夕方には肩がガチガチになっていたのが、施術の翌日も軽いままでした。話もじっくり聞いてくださって、肩以外にも姿勢のクセを教えてもらえたのが嬉しかったです。」
+            </p>
+            <footer class="voice-card__meta">
+              <div class="voice-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <p class="voice-card__name">A.T 様</p>
+                <p class="voice-card__detail">40代女性／デスクワーク</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="voice-card fade-up">
+            <div class="voice-card__rating" aria-label="評価 5/5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="voice-card__text">
+              「現場仕事で腰が限界でした。整骨院や接骨院をいくつか試してきたのですが、ここは説明がすごく丁寧で、その日のうちに腰の感じが変わったのが分かりました。月2回のペースで通っています。」
+            </p>
+            <footer class="voice-card__meta">
+              <div class="voice-card__avatar" aria-hidden="true">K</div>
+              <div>
+                <p class="voice-card__name">K.S 様</p>
+                <p class="voice-card__detail">30代男性／立ち仕事</p>
+              </div>
+            </footer>
+          </article>
+
+          <article class="voice-card fade-up">
+            <div class="voice-card__rating" aria-label="評価 5/5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="voice-card__text">
+              「ガヤガヤしたお店が苦手で、ずっと通える場所を探していました。完全予約制で他の方と会わない安心感と、終わったあとの静けさが心地よくて。気持ちまで整う場所です。」
+            </p>
+            <footer class="voice-card__meta">
+              <div class="voice-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <p class="voice-card__name">M.H 様</p>
+                <p class="voice-card__detail">50代女性／慢性肩こり</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+
+        <p class="voice__note fade-up">※ 個人の感想であり、効果を保証するものではありません。</p>
+      </div>
+    </section>
+
+    <!-- ================================
+         ⑤ ご利用の流れ
+         ※ step を増減すればステップ数を変えられる
+    ================================= -->
+    <section class="section flow" id="flow">
+      <div class="container">
+        <header class="section-head fade-up">
+          <p class="section-head__en">Flow</p>
+          <h2 class="section-head__jp">ご利用の流れ</h2>
+        </header>
+
+        <ol class="flow__list">
+          <li class="flow-step fade-up">
+            <div class="flow-step__num">STEP&nbsp;01</div>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">LINEで予約</h3>
+              <p class="flow-step__text">
+                公式LINEからご希望日時をお送りください。最短当日のご予約も可能です。お電話でも承ります。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-up">
+            <div class="flow-step__num">STEP&nbsp;02</div>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">来院・カウンセリング</h3>
+              <p class="flow-step__text">
+                お越しいただいたら、まずは20分ほどのカウンセリング。お体の状態とお悩みをじっくりうかがいます。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-up">
+            <div class="flow-step__num">STEP&nbsp;03</div>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">施術</h3>
+              <p class="flow-step__text">
+                その日の状態に合わせた施術を行います。痛みの少ない手技を中心に、ゆったりとした時間をお過ごしください。
+              </p>
+            </div>
+          </li>
+
+          <li class="flow-step fade-up">
+            <div class="flow-step__num">STEP&nbsp;04</div>
+            <div class="flow-step__body">
+              <h3 class="flow-step__title">アフターケアのご提案</h3>
+              <p class="flow-step__text">
+                ご自宅でできるストレッチや、次回のおすすめ来院時期をお伝えします。無理な勧誘はいたしません。
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================================
+         ⑥ FAQ（アコーディオン）
+         ※ details/summary を使い、JSなしでも開閉可能
+    ================================= -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <header class="section-head fade-up">
+          <p class="section-head__en">FAQ</p>
+          <h2 class="section-head__jp">よくあるご質問</h2>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              施術にかかる時間はどれくらいですか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>初回はカウンセリング込みで約60分、2回目以降は約45分が目安です。お時間に余裕をもってお越しください。</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              服装の指定はありますか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>動きやすい服装でお越しください。ご希望の方には、無料でお貸出しの施術着もご用意しています。</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              駐車場はありますか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>専用駐車場はございません。お車の場合は、近隣のコインパーキングをご利用ください（徒歩2分以内に複数あります）。</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              キャンセルはできますか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>前日までのご連絡であれば、キャンセル料は頂戴しておりません。当日キャンセルの場合のみ、施術料金の半額を頂戴しております。</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              当日予約はできますか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>空き枠があれば当日でもご案内可能です。LINEでの「本日空きありますか？」のひとことだけでも結構です。</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary>
+              <span class="faq-item__q">Q.</span>
+              健康保険は使えますか？
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__a">
+              <p>当院は自費施術のため、健康保険はご利用いただけません。あらかじめご了承ください。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+         ⑦ 最後のCTA
+         ※ LINE / 電話 / 住所 を書き換えるだけで流用可
+    ================================= -->
+    <section class="section cta-final" id="cta-final">
+      <div class="container">
+        <div class="cta-final__card fade-up">
+          <p class="cta-final__eyebrow">Reservation</p>
+          <h2 class="cta-final__title">
+            お体の状態を、<br class="sp-only">一度ご相談ください。
+          </h2>
+          <p class="cta-final__lead">
+            LINEから24時間ご予約・ご相談いただけます。<br>
+            「ちょっと聞きたいだけ」のメッセージも歓迎です。
+          </p>
+
+          <div class="cta-final__buttons">
+            <a href="#" class="btn btn--primary btn--large">
+              <span class="btn__icon" aria-hidden="true">💬</span>
+              LINEで予約・相談する
+            </a>
+            <a href="tel:0312345678" class="btn btn--ghost btn--large">
+              <span class="btn__icon" aria-hidden="true">📞</span>
+              03-1234-5678
+            </a>
+          </div>
+
+          <dl class="cta-final__info">
+            <div>
+              <dt>営業時間</dt>
+              <dd>10:00 - 20:00（最終受付 19:00）</dd>
+            </div>
+            <div>
+              <dt>定休日</dt>
+              <dd>水曜・第3日曜</dd>
+            </div>
+            <div>
+              <dt>住所</dt>
+              <dd>東京都世田谷区◯◯ 1-2-3 ◯◯ビル 2F</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================
+       フッター
+  ================================= -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">凪 整体院</p>
+        <p class="site-footer__addr">東京都世田谷区◯◯ 1-2-3 ◯◯ビル 2F</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターメニュー">
+        <a href="#worry">お悩み</a>
+        <a href="#feature">特徴</a>
+        <a href="#voice">お客様の声</a>
+        <a href="#flow">ご利用の流れ</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <p class="site-footer__copy">© 2026 NAGI Seitai-in（架空デモ）</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2" defer></script>
+</body>
+</html>
+
+<!-- =====================================================================
+  【別業種への流用ガイド】初心者の方はここを書き換えれば流用できます
+
+  1.  店名・ロゴ表記
+      → <title> / <meta description> / .site-name の中身
+      → site-footer の店名・住所
+      → cta-final__info の営業時間・定休日・住所
+      → 電話番号は href="tel:..." と表示テキストの両方を書き換える
+
+  2.  キャッチコピー
+      → .hero__title（FVの大見出し）
+      → .hero__lead（FVのサブ）
+      → .cta-final__title（最終CTA見出し）
+
+  3.  色味（ブランドカラー）
+      → style.css の冒頭 :root 部分の --color-* 変数を変えるだけで全体反映
+        例) 美容室 → --color-accent を温かみのあるピンク/ベージュ系に
+            鍼灸院 → そのままネイビーで OK
+            ジム  → --color-accent を黒に近いグレーに
+
+  4.  各セクションのテキスト
+      → 「お悩み」「特徴」「お客様の声」「FAQ」は <article>/<details> ごと
+        コピペで増減できる。文言だけ書き換える形で OK。
+
+  5.  画像
+      → ヒーロー画像は style.css 内 .hero__photo の background-image
+      → ここに自前の写真URL（または ./images/xxx.jpg などの相対パス）を入れる
+      → アイコン部分は SVG で軽量に作ってあるので置き換え不要
+
+  6.  予約導線（LINE / 電話）
+      → 「LINEで予約」ボタンの href="#" を、自店のLINE公式URLに置き換え
+        （例: https://lin.ee/xxxxxxx ）
+      → 電話の href="tel:0312345678" を実際の番号に変更
+
+  7.  GitHub Pages で公開する手順（おさらい）
+      ① 3ファイルを GitHub のリポジトリに push
+      ② Settings → Pages → Branch: main / root → Save
+      ③ 数分後、https://ユーザー名.github.io/リポジトリ名/ で公開される
+====================================================================== -->
