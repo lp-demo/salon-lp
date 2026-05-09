@@ -621,22 +621,22 @@ ol, ul { list-style: none; }
   counter-reset: flow;
 }
 .flow__list::before {
-  /* ステップ番号の縦線（カラム間の余白中央に配置してテキストと干渉させない） */
+  /* ステップ番号の縦線（STEPテキストのすぐ後ろ） */
   content: '';
   position: absolute;
-  left: 144px;
-  top: 18px;
-  bottom: 18px;
+  left: 100px;
+  top: 24px;
+  bottom: 24px;
   width: 1px;
   background: linear-gradient(180deg, transparent, var(--color-line) 10%, var(--color-line) 90%, transparent);
 }
 
 .flow-step {
   display: grid;
-  grid-template-columns: 130px 1fr 220px;
-  gap: 28px;
+  grid-template-columns: 160px 1fr 200px;
+  gap: 32px;
   align-items: center;
-  padding: 18px 0;
+  padding: 28px 0;
   position: relative;
 }
 .flow-step__num {
@@ -645,15 +645,15 @@ ol, ul { list-style: none; }
   letter-spacing: 0.25em;
   color: var(--color-accent);
   align-self: flex-start;
-  padding-top: 6px;
+  padding-top: 8px;
   position: relative;
   z-index: 1;
 }
 .flow-step__num::after {
-  /* 円マーカーをカラム間の余白中央に配置 */
+  /* 円マーカーは STEP テキストのすぐ右に配置 */
   content: '';
   position: absolute;
-  left: 144px; top: 8px;
+  left: 100px; top: 10px;
   transform: translateX(-50%);
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -985,10 +985,10 @@ ol, ul { list-style: none; }
   /* 特徴は1カラムに */
   .feature__grid { grid-template-columns: 1fr; }
 
-  /* 流れ：画像はしっかり見せつつ縦余白を詰める */
-  .flow-step { grid-template-columns: 110px 1fr 180px; gap: 22px; padding: 14px 0; }
-  .flow__list::before { left: 121px; }
-  .flow-step__num::after { left: 121px; }
+  /* 流れ：マーカーは STEP テキストのすぐ右に配置 */
+  .flow-step { grid-template-columns: 120px 1fr 160px; gap: 24px; }
+  .flow__list::before { left: 95px; }
+  .flow-step__num::after { left: 95px; }
 }
 
 /* スマホ */
@@ -1050,8 +1050,8 @@ ol, ul { list-style: none; }
   .voice-card { padding: 28px 22px; }
   .voice-card__text { font-size: 13.5px; }
 
-  /* 流れ：スマホでは画像をテキスト下に配置／マーカーは余白中央 */
-  .flow__list::before { left: 110px; }
+  /* 流れ：スマホでは画像をテキスト下に配置／マーカーは STEP の右すぐ */
+  .flow__list::before { left: 78px; }
   .flow-step {
     grid-template-columns: 100px 1fr;
     grid-template-areas:
@@ -1063,7 +1063,7 @@ ol, ul { list-style: none; }
   }
   .flow-step__num { grid-area: num; font-size: 11px; padding-top: 4px; }
   .flow-step__num::after {
-    left: 110px;
+    left: 78px;
     width: 12px; height: 12px;
     top: 6px;
   }
