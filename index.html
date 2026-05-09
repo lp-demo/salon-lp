@@ -31,8 +31,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#top" class="site-name">
-        <span class="site-name__en">NAGI</span>
         <span class="site-name__jp">凪 整体院</span>
+        <span class="site-name__en">Seitai Salon NAGI</span>
       </a>
 
       <nav class="site-nav" aria-label="メインメニュー">
@@ -157,6 +157,7 @@
     <!-- ================================
          ③ この店舗の特徴
          ※ feature__list の <li> を増減すれば項目数を変えられる
+         ※ 左の写真は images/feature.jpg を置けば自動で反映される
     ================================= -->
     <section class="section feature" id="feature">
       <div class="container">
@@ -165,7 +166,17 @@
           <h2 class="section-head__jp">凪 整体院が選ばれる<br class="sp-only">4つの理由</h2>
         </header>
 
-        <div class="feature__grid">
+        <div class="feature__layout">
+          <!-- 写真エリア（実写を入れたい場合は images/feature.jpg を保存） -->
+          <figure class="feature__visual fade-up">
+            <div class="feature__photo" aria-label="自然光が差し込む落ち着いた個室"></div>
+            <figcaption class="feature__caption">
+              <span class="feature__caption-dot"></span>
+              個室でゆっくりご相談いただけます
+            </figcaption>
+          </figure>
+
+          <div class="feature__grid">
           <article class="feature-card fade-up">
             <div class="feature-card__icon">
               <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
@@ -217,7 +228,8 @@
               木の温もりと自然光を活かした、5坪ほどの個室。アロマと小さなBGMで、施術前から呼吸が深くなる空間です。
             </p>
           </article>
-        </div>
+          </div><!-- /.feature__grid -->
+        </div><!-- /.feature__layout -->
       </div>
     </section>
 
@@ -282,13 +294,14 @@
           </article>
         </div>
 
-        <p class="voice__note fade-up">※ 個人の感想であり、効果を保証するものではありません。</p>
+        <p class="voice__note fade-up">※ 感じ方には個人差があります。</p>
       </div>
     </section>
 
     <!-- ================================
          ⑤ ご利用の流れ
          ※ step を増減すればステップ数を変えられる
+         ※ 左の写真は images/flow.jpg を置けば自動で反映される
     ================================= -->
     <section class="section flow" id="flow">
       <div class="container">
@@ -297,7 +310,17 @@
           <h2 class="section-head__jp">ご利用の流れ</h2>
         </header>
 
-        <ol class="flow__list">
+        <div class="flow__layout">
+          <!-- 写真エリア（実写を入れたい場合は images/flow.jpg を保存） -->
+          <figure class="flow__visual fade-up">
+            <div class="flow__photo" aria-label="LINEで予約を取る様子"></div>
+            <figcaption class="flow__caption">
+              <span class="feature__caption-dot"></span>
+              予約から施術、アフターケアまで
+            </figcaption>
+          </figure>
+
+          <ol class="flow__list">
           <li class="flow-step fade-up">
             <div class="flow-step__num">STEP&nbsp;01</div>
             <div class="flow-step__body">
@@ -337,7 +360,8 @@
               </p>
             </div>
           </li>
-        </ol>
+          </ol>
+        </div><!-- /.flow__layout -->
       </div>
     </section>
 
@@ -415,7 +439,7 @@
               <span class="faq-item__icon" aria-hidden="true"></span>
             </summary>
             <div class="faq-item__a">
-              <p>当院は自費施術のため、健康保険はご利用いただけません。あらかじめご了承ください。</p>
+              <p>当院は自費施術となります。料金は事前に分かりやすくご案内しますので、ご安心ください。</p>
             </div>
           </details>
         </div>
@@ -423,46 +447,79 @@
     </section>
 
     <!-- ================================
-         ⑦ 最後のCTA
-         ※ LINE / 電話 / 住所 を書き換えるだけで流用可
+         ⑦ 最後のCTA（カード型）
+         ※ LINEボタン → 4つの情報カード の順で予約導線を整理
+         ※ 流用時は href / tel / 住所 を書き換えるだけ
     ================================= -->
     <section class="section cta-final" id="cta-final">
       <div class="container">
-        <div class="cta-final__card fade-up">
-          <p class="cta-final__eyebrow">Reservation</p>
-          <h2 class="cta-final__title">
+        <header class="section-head fade-up">
+          <p class="section-head__en">Reservation</p>
+          <h2 class="section-head__jp">
             お体の状態を、<br class="sp-only">一度ご相談ください。
           </h2>
-          <p class="cta-final__lead">
-            LINEから24時間ご予約・ご相談いただけます。<br>
-            「ちょっと聞きたいだけ」のメッセージも歓迎です。
-          </p>
+        </header>
 
-          <div class="cta-final__buttons">
-            <a href="#" class="btn btn--primary btn--large">
-              <span class="btn__icon" aria-hidden="true">💬</span>
-              LINEで予約・相談する
-            </a>
-            <a href="tel:0312345678" class="btn btn--ghost btn--large">
-              <span class="btn__icon" aria-hidden="true">📞</span>
-              03-1234-5678
-            </a>
+        <p class="cta-final__lead fade-up">
+          LINEから24時間ご予約・ご相談いただけます。<br>
+          「ちょっと聞きたいだけ」のメッセージも歓迎です。
+        </p>
+
+        <!-- 一番目立たせるLINE予約カード -->
+        <a href="#" class="cta-card cta-card--primary fade-up">
+          <span class="cta-card__icon" aria-hidden="true">💬</span>
+          <span class="cta-card__body">
+            <span class="cta-card__title">LINEで予約・相談する</span>
+            <span class="cta-card__sub">24時間受付・相談だけでもOK</span>
+          </span>
+          <span class="cta-card__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- 4つの情報カード -->
+        <div class="cta-info">
+          <a href="tel:0312345678" class="cta-info-card fade-up">
+            <span class="cta-info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </span>
+            <span class="cta-info-card__label">電話</span>
+            <span class="cta-info-card__value">03-1234-5678</span>
+          </a>
+
+          <div class="cta-info-card fade-up">
+            <span class="cta-info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </span>
+            <span class="cta-info-card__label">営業時間</span>
+            <span class="cta-info-card__value">10:00 - 20:00<small>最終受付 19:00</small></span>
           </div>
 
-          <dl class="cta-final__info">
-            <div>
-              <dt>営業時間</dt>
-              <dd>10:00 - 20:00（最終受付 19:00）</dd>
-            </div>
-            <div>
-              <dt>定休日</dt>
-              <dd>水曜・第3日曜</dd>
-            </div>
-            <div>
-              <dt>住所</dt>
-              <dd>東京都世田谷区◯◯ 1-2-3 ◯◯ビル 2F</dd>
-            </div>
-          </dl>
+          <div class="cta-info-card fade-up">
+            <span class="cta-info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </span>
+            <span class="cta-info-card__label">定休日</span>
+            <span class="cta-info-card__value">水曜・第3日曜</span>
+          </div>
+
+          <div class="cta-info-card fade-up">
+            <span class="cta-info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </span>
+            <span class="cta-info-card__label">住所</span>
+            <span class="cta-info-card__value">東京都世田谷区◯◯<small>1-2-3 ◯◯ビル 2F</small></span>
+          </div>
         </div>
       </div>
     </section>
