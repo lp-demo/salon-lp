@@ -664,6 +664,7 @@ ol, ul { list-style: none; }
 .flow-step__body {
   align-self: flex-start;
   padding-top: 4px;
+  padding-right: 32px;  /* 本文と写真の間に余白を追加 */
 }
 .flow-step__title {
   font-family: var(--font-serif);
@@ -1067,7 +1068,7 @@ ol, ul { list-style: none; }
     width: 12px; height: 12px;
     top: 6px;
   }
-  .flow-step__body { grid-area: body; padding-top: 0; }
+  .flow-step__body { grid-area: body; padding-top: 0; padding-right: 0; }
   .flow-step__title { font-size: 17px; }
   .flow-step__text { font-size: 13.5px; }
   .flow-step__image {
