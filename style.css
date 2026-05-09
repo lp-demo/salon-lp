@@ -624,19 +624,19 @@ ol, ul { list-style: none; }
   /* ステップ番号の縦線（カラム間の余白中央に配置してテキストと干渉させない） */
   content: '';
   position: absolute;
-  left: 176px;
-  top: 24px;
-  bottom: 24px;
+  left: 144px;
+  top: 18px;
+  bottom: 18px;
   width: 1px;
   background: linear-gradient(180deg, transparent, var(--color-line) 10%, var(--color-line) 90%, transparent);
 }
 
 .flow-step {
   display: grid;
-  grid-template-columns: 160px 1fr 200px;
-  gap: 32px;
+  grid-template-columns: 130px 1fr 170px;
+  gap: 28px;
   align-items: center;
-  padding: 28px 0;
+  padding: 18px 0;
   position: relative;
 }
 .flow-step__num {
@@ -645,7 +645,7 @@ ol, ul { list-style: none; }
   letter-spacing: 0.25em;
   color: var(--color-accent);
   align-self: flex-start;
-  padding-top: 8px;
+  padding-top: 6px;
   position: relative;
   z-index: 1;
 }
@@ -653,7 +653,7 @@ ol, ul { list-style: none; }
   /* 円マーカーをカラム間の余白中央に配置 */
   content: '';
   position: absolute;
-  left: 176px; top: 10px;
+  left: 144px; top: 8px;
   transform: translateX(-50%);
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -986,9 +986,9 @@ ol, ul { list-style: none; }
   .feature__grid { grid-template-columns: 1fr; }
 
   /* 流れ：画像を少し小さく＋マーカー位置を新カラム幅に合わせる */
-  .flow-step { grid-template-columns: 120px 1fr 160px; gap: 24px; }
-  .flow__list::before { left: 132px; }
-  .flow-step__num::after { left: 132px; }
+  .flow-step { grid-template-columns: 110px 1fr 140px; gap: 22px; padding: 14px 0; }
+  .flow__list::before { left: 121px; }
+  .flow-step__num::after { left: 121px; }
 }
 
 /* スマホ */
