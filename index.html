@@ -289,7 +289,7 @@
     <!-- ================================
          ⑤ ご利用の流れ
          ※ step を増減すればステップ数を変えられる
-         ※ 左の写真は images/flow.jpg を置けば自動で反映される
+         ※ 各ステップ右側に images/flow-XX.png を表示
     ================================= -->
     <section class="section flow" id="flow">
       <div class="container">
@@ -298,17 +298,7 @@
           <h2 class="section-head__jp">ご利用の流れ</h2>
         </header>
 
-        <div class="flow__layout">
-          <!-- 写真エリア（実写を入れたい場合は images/flow.jpg を保存） -->
-          <figure class="flow__visual fade-up">
-            <div class="flow__photo" aria-label="LINEで予約を取る様子"></div>
-            <figcaption class="flow__caption">
-              <span class="feature__caption-dot"></span>
-              予約から施術、アフターケアまで
-            </figcaption>
-          </figure>
-
-          <ol class="flow__list">
+        <ol class="flow__list">
           <li class="flow-step fade-up">
             <div class="flow-step__num">STEP&nbsp;01</div>
             <div class="flow-step__body">
@@ -317,6 +307,9 @@
                 公式LINEからご希望日時をお送りください。最短当日のご予約も可能です。お電話でも承ります。
               </p>
             </div>
+            <figure class="flow-step__image">
+              <img src="images/flow-01.png" alt="スマートフォンでLINE予約をする様子" loading="lazy" decoding="async">
+            </figure>
           </li>
 
           <li class="flow-step fade-up">
@@ -327,6 +320,9 @@
                 お越しいただいたら、まずは20分ほどのカウンセリング。お体の状態とお悩みをじっくりうかがいます。
               </p>
             </div>
+            <figure class="flow-step__image">
+              <img src="images/flow-02.png" alt="丁寧にカウンセリングを行う施術者" loading="lazy" decoding="async">
+            </figure>
           </li>
 
           <li class="flow-step fade-up">
@@ -337,6 +333,9 @@
                 その日の状態に合わせた施術を行います。痛みの少ない手技を中心に、ゆったりとした時間をお過ごしください。
               </p>
             </div>
+            <figure class="flow-step__image">
+              <img src="images/flow-03.png" alt="落ち着いた個室で施術を受ける様子" loading="lazy" decoding="async">
+            </figure>
           </li>
 
           <li class="flow-step fade-up">
@@ -347,9 +346,11 @@
                 ご自宅でできるストレッチや、次回のおすすめ来院時期をお伝えします。無理な勧誘はいたしません。
               </p>
             </div>
+            <figure class="flow-step__image">
+              <img src="images/flow-04.png" alt="自然光が差す静かな待合スペース" loading="lazy" decoding="async">
+            </figure>
           </li>
-          </ol>
-        </div><!-- /.flow__layout -->
+        </ol>
       </div>
     </section>
 

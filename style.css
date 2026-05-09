@@ -611,52 +611,9 @@ ol, ul { list-style: none; }
 .flow {
   background: var(--color-bg);
 }
-
-/* 2カラム：左に写真（スティッキー）、右にステップ */
-.flow__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 56px;
-  align-items: start;
-}
-
-.flow__visual {
-  margin: 0;
-  position: sticky;
-  top: 100px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 4 / 5;
-}
-.flow__photo {
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(180deg, transparent 50%, rgba(28, 42, 64, 0.08)),
-    url('images/flow.jpg') center / cover no-repeat,
-    linear-gradient(135deg, #eef2f7 0%, #dde4ee 60%, #c8d2df 100%);
-}
-.flow__caption {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 9px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--color-navy);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-sm);
-}
-
 .flow__list {
+  max-width: 920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -664,10 +621,10 @@ ol, ul { list-style: none; }
   counter-reset: flow;
 }
 .flow__list::before {
-  /* 縦の線 */
+  /* ステップ番号の縦線 */
   content: '';
   position: absolute;
-  left: 60px;
+  left: 80px;
   top: 24px;
   bottom: 24px;
   width: 1px;
@@ -676,25 +633,26 @@ ol, ul { list-style: none; }
 
 .flow-step {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 28px;
-  align-items: flex-start;
-  padding: 24px 0;
+  grid-template-columns: 160px 1fr 200px;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
   position: relative;
 }
 .flow-step__num {
   font-family: var(--font-serif);
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: 0.25em;
   color: var(--color-accent);
-  padding-top: 6px;
+  align-self: flex-start;
+  padding-top: 8px;
   position: relative;
   z-index: 1;
 }
 .flow-step__num::after {
   content: '';
   position: absolute;
-  left: 60px; top: 8px;
+  left: 80px; top: 10px;
   transform: translateX(-50%);
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -702,17 +660,42 @@ ol, ul { list-style: none; }
   border: 2px solid var(--color-navy);
   box-shadow: 0 0 0 4px var(--color-bg);
 }
+.flow-step__body {
+  align-self: flex-start;
+  padding-top: 4px;
+}
 .flow-step__title {
   font-family: var(--font-serif);
-  font-size: 20px;
+  font-size: 22px;
   color: var(--color-navy);
   margin-bottom: 10px;
   letter-spacing: 0.04em;
 }
 .flow-step__text {
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--color-text-mute);
   line-height: 1.9;
+}
+
+/* 各ステップ右側の画像 */
+.flow-step__image {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg-warm);
+}
+.flow-step__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+.flow-step:hover .flow-step__image img {
+  transform: scale(1.04);
 }
 
 
@@ -1001,14 +984,8 @@ ol, ul { list-style: none; }
   /* 特徴は1カラムに */
   .feature__grid { grid-template-columns: 1fr; }
 
-  /* 流れも縦並びに（写真 → ステップ） */
-  .flow__layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .flow__visual { aspect-ratio: 16 / 11; position: static; }
+  /* 流れ：画像を少し小さく */
+  .flow-step { grid-template-columns: 120px 1fr 160px; gap: 24px; }
 }
 
 /* スマホ */
@@ -1070,21 +1047,31 @@ ol, ul { list-style: none; }
   .voice-card { padding: 28px 22px; }
   .voice-card__text { font-size: 13.5px; }
 
-  /* 流れ */
+  /* 流れ：スマホでは画像をテキスト下に配置 */
   .flow__list::before { left: 40px; }
   .flow-step {
-    grid-template-columns: 90px 1fr;
-    gap: 16px;
-    padding: 18px 0;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas:
+      "num body"
+      "image image";
+    gap: 16px 20px;
+    padding: 22px 0;
+    align-items: flex-start;
   }
-  .flow-step__num { font-size: 11px; }
+  .flow-step__num { grid-area: num; font-size: 11px; padding-top: 4px; }
   .flow-step__num::after {
     left: 40px;
     width: 12px; height: 12px;
+    top: 6px;
   }
+  .flow-step__body { grid-area: body; padding-top: 0; }
   .flow-step__title { font-size: 17px; }
   .flow-step__text { font-size: 13.5px; }
-  .flow__caption { font-size: 11.5px; padding: 7px 13px; bottom: 12px; left: 12px; }
+  .flow-step__image {
+    grid-area: image;
+    aspect-ratio: 16 / 10;
+    margin-top: 6px;
+  }
 
   /* FAQ */
   .faq-item summary { padding: 18px 20px; font-size: 14px; }
