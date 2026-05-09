@@ -492,105 +492,47 @@ ol, ul { list-style: none; }
   background: var(--color-bg);
   position: relative;
 }
-
-/* 2カラムレイアウト：左に写真、右に4つのカード */
-.feature__layout {
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 56px;
-  align-items: start;
-}
-
-/* 写真エリア（実写は images/feature.jpg を保存すると自動表示） */
-.feature__visual {
-  margin: 0;
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 4 / 5;
-}
-.feature__photo {
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(180deg, transparent 50%, rgba(28, 42, 64, 0.08)),
-    url('images/feature.jpg') center / cover no-repeat,
-    linear-gradient(135deg, var(--color-bg-warm) 0%, #ede4d6 60%, #d8c8b0 100%);
-}
-.feature__caption {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 9px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 12.5px;
-  font-weight: 500;
-  color: var(--color-navy);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-sm);
-}
-.feature__caption-dot {
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  display: inline-block;
-}
-
-/* 4つのカードを縦に並べる */
 .feature__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.feature-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  border: 1px solid var(--color-line-faint);
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
-/* カードを横並びレイアウトに（アイコン左、テキスト右） */
-.feature-card {
-  background: #fff;
-  border-radius: var(--radius-md);
-  padding: 26px 28px;
-  border: 1px solid var(--color-line-faint);
-  box-shadow: var(--shadow-sm);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 22px;
-  align-items: flex-start;
-}
 .feature-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(201, 168, 124, 0.4);
 }
 .feature-card__icon {
-  width: 52px; height: 52px;
+  width: 56px; height: 56px;
   border-radius: 50%;
   background: var(--color-bg-warm);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-navy);
-  flex-shrink: 0;
 }
-.feature-card__icon svg { width: 24px; height: 24px; }
+.feature-card__icon svg { width: 28px; height: 28px; }
 .feature-card__title {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 22px;
   color: var(--color-navy);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   line-height: 1.5;
-  margin-bottom: 8px;
 }
 .feature-card__text {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-text-mute);
-  line-height: 1.85;
+  line-height: 1.9;
 }
 
 
@@ -1056,17 +998,17 @@ ol, ul { list-style: none; }
   .voice__grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
   .site-nav { display: none; }   /* ナビは隠して「予約する」ボタンだけ残す */
 
-  /* 特徴・流れも縦並びに（写真 → カード/ステップ） */
-  .feature__layout,
+  /* 特徴は1カラムに */
+  .feature__grid { grid-template-columns: 1fr; }
+
+  /* 流れも縦並びに（写真 → ステップ） */
   .flow__layout {
     grid-template-columns: 1fr;
     gap: 40px;
     max-width: 600px;
     margin: 0 auto;
   }
-  .feature__visual,
-  .flow__visual { aspect-ratio: 16 / 11; }
-  .flow__visual { position: static; }  /* スマホ・タブレットではスティッキー解除 */
+  .flow__visual { aspect-ratio: 16 / 11; position: static; }
 }
 
 /* スマホ */
@@ -1120,16 +1062,9 @@ ol, ul { list-style: none; }
   .worry__bridge { font-size: 16px; margin-top: 40px; }
 
   /* 特徴 */
-  .feature-card {
-    padding: 22px 22px;
-    grid-template-columns: auto 1fr;
-    gap: 18px;
-  }
-  .feature-card__icon { width: 44px; height: 44px; }
-  .feature-card__icon svg { width: 20px; height: 20px; }
-  .feature-card__title { font-size: 16.5px; margin-bottom: 6px; }
-  .feature-card__text { font-size: 13.5px; }
-  .feature__caption { font-size: 11.5px; padding: 7px 13px; bottom: 12px; left: 12px; }
+  .feature-card { padding: 32px 24px; border-radius: var(--radius-md); }
+  .feature-card__title { font-size: 18px; }
+  .feature-card__text { font-size: 14px; }
 
   /* 声 */
   .voice-card { padding: 28px 22px; }
