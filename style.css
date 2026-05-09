@@ -633,7 +633,7 @@ ol, ul { list-style: none; }
 
 .flow-step {
   display: grid;
-  grid-template-columns: 130px 1fr 170px;
+  grid-template-columns: 130px 1fr 220px;
   gap: 28px;
   align-items: center;
   padding: 18px 0;
@@ -985,8 +985,8 @@ ol, ul { list-style: none; }
   /* 特徴は1カラムに */
   .feature__grid { grid-template-columns: 1fr; }
 
-  /* 流れ：画像を少し小さく＋マーカー位置を新カラム幅に合わせる */
-  .flow-step { grid-template-columns: 110px 1fr 140px; gap: 22px; padding: 14px 0; }
+  /* 流れ：画像はしっかり見せつつ縦余白を詰める */
+  .flow-step { grid-template-columns: 110px 1fr 180px; gap: 22px; padding: 14px 0; }
   .flow__list::before { left: 121px; }
   .flow-step__num::after { left: 121px; }
 }
