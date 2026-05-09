@@ -621,10 +621,10 @@ ol, ul { list-style: none; }
   counter-reset: flow;
 }
 .flow__list::before {
-  /* ステップ番号の縦線 */
+  /* ステップ番号の縦線（カラム間の余白中央に配置してテキストと干渉させない） */
   content: '';
   position: absolute;
-  left: 80px;
+  left: 176px;
   top: 24px;
   bottom: 24px;
   width: 1px;
@@ -650,9 +650,10 @@ ol, ul { list-style: none; }
   z-index: 1;
 }
 .flow-step__num::after {
+  /* 円マーカーをカラム間の余白中央に配置 */
   content: '';
   position: absolute;
-  left: 80px; top: 10px;
+  left: 176px; top: 10px;
   transform: translateX(-50%);
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -984,8 +985,10 @@ ol, ul { list-style: none; }
   /* 特徴は1カラムに */
   .feature__grid { grid-template-columns: 1fr; }
 
-  /* 流れ：画像を少し小さく */
+  /* 流れ：画像を少し小さく＋マーカー位置を新カラム幅に合わせる */
   .flow-step { grid-template-columns: 120px 1fr 160px; gap: 24px; }
+  .flow__list::before { left: 132px; }
+  .flow-step__num::after { left: 132px; }
 }
 
 /* スマホ */
@@ -1047,8 +1050,8 @@ ol, ul { list-style: none; }
   .voice-card { padding: 28px 22px; }
   .voice-card__text { font-size: 13.5px; }
 
-  /* 流れ：スマホでは画像をテキスト下に配置 */
-  .flow__list::before { left: 40px; }
+  /* 流れ：スマホでは画像をテキスト下に配置／マーカーは余白中央 */
+  .flow__list::before { left: 110px; }
   .flow-step {
     grid-template-columns: 100px 1fr;
     grid-template-areas:
@@ -1060,7 +1063,7 @@ ol, ul { list-style: none; }
   }
   .flow-step__num { grid-area: num; font-size: 11px; padding-top: 4px; }
   .flow-step__num::after {
-    left: 40px;
+    left: 110px;
     width: 12px; height: 12px;
     top: 6px;
   }
