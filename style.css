@@ -403,15 +403,54 @@ ol, ul { list-style: none; }
 .worry-card {
   background: #fff;
   border-radius: var(--radius-md);
-  padding: 40px 32px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-line-faint);
   transition: transform .25s ease, box-shadow .25s ease;
+  overflow: hidden;            /* 画像の角を丸める */
+  display: flex;
+  flex-direction: column;
 }
 .worry-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
+
+/* カード上部の画像エリア */
+.worry-card__image {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--color-bg-warm);  /* 画像読み込み中の背景色 */
+  position: relative;
+}
+.worry-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+.worry-card:hover .worry-card__image img {
+  transform: scale(1.04);  /* ホバーでほんのり拡大 */
+}
+.worry-card__image::after {
+  /* 画像下に薄いグラデーションで馴染ませる */
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 30%;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.4));
+  pointer-events: none;
+}
+
+.worry-card__body {
+  padding: 32px 28px 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .worry-card__num {
   font-family: var(--font-serif);
   font-size: 14px;
@@ -958,9 +997,10 @@ ol, ul { list-style: none; }
   .hero__scroll { display: none; }
 
   /* お悩み */
-  .worry-card { padding: 28px 24px; }
+  .worry-card__body { padding: 24px 22px 28px; }
   .worry-card__title { font-size: 17px; }
   .worry-card__text { font-size: 13.5px; }
+  .worry-card__image { aspect-ratio: 16 / 10; }  /* スマホでは少し横長に */
   .worry__bridge { font-size: 16px; margin-top: 40px; }
 
   /* 特徴 */
